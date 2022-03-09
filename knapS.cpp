@@ -152,7 +152,7 @@ int main()
     cin >> size;
     Item arr[size];
     cout << "Enter Array value and Weight : ";
-    for (int i = 0;i<size:i++){
+    for (int i = 0;i<size; i++){
         int x, y;
         cin >> x >> y;
         arr[0] = {x, y};
