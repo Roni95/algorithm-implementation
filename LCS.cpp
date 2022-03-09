@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstring>
-
 using namespace std;
 
 int lcs(char *X, char *Y, int m, int n)

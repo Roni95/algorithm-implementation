@@ -68,10 +68,8 @@ bool solve(int n, int row)
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
     int n;
-    cout << "Enter Queen Number : ";
+    cout << "Enter Queen Number : \n";
     cin >> n;
     for (int i = 0; i < n; i++)
     {
