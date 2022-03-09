@@ -97,7 +97,7 @@ int main()
     cout << "Enter Size : ";
     cin >> size;
     Item arr[size];
-    cout << "Enter Array value and Weight : ";
+    cout << "Enter Array Weight and Value : ";
     for (int i = 0;i<size; i++){
         int x, y;
         cin >> x >> y;
