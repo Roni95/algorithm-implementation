@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cstring>
 
@@ -22,9 +21,7 @@ int main()
 
     int m = strlen(text1);
     int n = strlen(text2);
-
     cout << "Length of LCS is " << lcs(text1, text2, m, n) << endl;
-
 
     return 0;
 }

@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
-
 struct Node
 {
     int startTime;
@@ -13,12 +12,10 @@ struct Node
         endTime = b;
     }
 };
-
 bool comp(Node a, Node b)
 {
     return a.endTime < b.endTime;
 }
-
 int main()
 {
     vector<Node> times;
