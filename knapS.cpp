@@ -145,8 +145,23 @@ int knapsack(int W, Item arr[], int n)
 // driver program to test above function
 int main()
 {
-    int W = 10; // Weight of knapsack
-    Item arr[] = {{2, 40}, {3.14, 50}, {1.98, 100}, {5, 95}, {3, 30}};
+    int W ; 
+
+    int size;
+    cout << "Enter Size : ";
+    cin >> size;
+    Item arr[size];
+    cout << "Enter Array value and Weight : ";
+    for (int i = 0;i<size:i++){
+        int x, y;
+        cin >> x >> y;
+        arr[0] = {x, y};
+    }
+
+    cout<<"Enter The value of W : ";
+    cin >> W;
+    // Item arr[] = {{2, 40}, {3.14, 50}, {1.98, 100}, {5, 95}, {3, 30}};
+
     int n = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Maximum possible profit = "
