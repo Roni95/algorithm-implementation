@@ -57,9 +57,10 @@ int main()
     int nedge;
     cout << "Enter The number of edge : ";
     cin >> nedge;
-    Graph g(nedge+1);
+    nedge++;
+    Graph g(nedge);
     cout<<"Enter those Edges : ";
-    for (int i = 0; i < nedge;i++){
+    for (int i = 0; i < nedge-1;i++){
         int x, y;
         cin >> x>>y;
         g.addEdge(x,y);

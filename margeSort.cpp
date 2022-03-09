@@ -2,24 +2,22 @@
 
 using namespace std;
 
-/* Function to merge the subarrays of a[] */
 void merge(int a[], int beg, int mid, int end)
 {
     int i, j, k;
     int n1 = mid - beg + 1;
     int n2 = end - mid;
 
-    int LeftArray[n1], RightArray[n2]; // temporary arrays
+    int LeftArray[n1], RightArray[n2]; 
 
-    /* copy data to temp arrays */
     for (int i = 0; i < n1; i++)
         LeftArray[i] = a[beg + i];
     for (int j = 0; j < n2; j++)
         RightArray[j] = a[mid + 1 + j];
 
-    i = 0;   /* initial index of first sub-array */
-    j = 0;   /* initial index of second sub-array */
-    k = beg; /* initial index of merged sub-array */
+    i = 0;  
+    j = 0;   
+    k = beg; 
 
     while (i < n1 && j < n2)
     {
@@ -61,7 +59,6 @@ void mergeSort(int a[], int beg, int end)
     }
 }
 
-/* Function to print the array */
 void printArray(int a[], int n)
 {
     int i;
@@ -71,7 +68,13 @@ void printArray(int a[], int n)
 
 int main()
 {
-    int a[] = {11, 30, 24, 7, 31, 16, 39, 41};
+    int size;
+    cout << "Enter Array Size : ";
+    cin >> size;
+    int a[size];
+    cout<< "Enter All the elements : "
+    for (int i = 0; i < size; i++)
+        cin>>a[i];
     int n = sizeof(a) / sizeof(a[0]);
     cout << "Before sorting array elements are - \n";
     printArray(a, n);

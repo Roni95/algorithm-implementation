@@ -1,4 +1,3 @@
-// Ford-Fulkerson algorith in C++
 
 #include <limits.h>
 #include <string.h>
@@ -9,7 +8,6 @@ using namespace std;
 
 #define V 6
 
-// Using BFS as a searching algorithm
 bool bfs(int rGraph[V][V], int s, int t, int parent[])
 {
     bool visited[V];
@@ -39,7 +37,6 @@ bool bfs(int rGraph[V][V], int s, int t, int parent[])
     return (visited[t] == true);
 }
 
-// Applying fordfulkerson algorithm
 int fordFulkerson(int graph[V][V], int s, int t)
 {
     int u, v;
@@ -52,7 +49,6 @@ int fordFulkerson(int graph[V][V], int s, int t)
     int parent[V];
     int max_flow = 0;
 
-    // Updating the residual values of edges
     while (bfs(rGraph, s, t, parent))
     {
         int path_flow = INT_MAX;
@@ -69,7 +65,6 @@ int fordFulkerson(int graph[V][V], int s, int t)
             rGraph[v][u] += path_flow;
         }
 
-        // Adding the path flows
         max_flow += path_flow;
     }
 
@@ -78,12 +73,16 @@ int fordFulkerson(int graph[V][V], int s, int t)
 
 int main()
 {
-    int graph[V][V] = {{0, 8, 0, 0, 3, 0},
-                       {0, 0, 9, 0, 0, 0},
-                       {0, 0, 0, 0, 7, 2},
-                       {0, 0, 0, 0, 0, 5},
-                       {0, 0, 7, 4, 0, 0},
-                       {0, 0, 0, 0, 0, 0}};
+
+    int graph[V][V];
+    cout << "Enter the Adjancy Matrix of the Graph : " << endl;
+    for (int i = 0; i < V; i++)
+    {
+        for (int j = 0; j < V; j++)
+        {
+            cin >> graph[i][j];
+        }
+    }
 
     cout << "Max Flow: " << fordFulkerson(graph, 0, 5) << endl;
 }
