@@ -72,7 +72,7 @@ int main()
     cout << "Enter Array Size : ";
     cin >> size;
     int a[size];
-    cout<< "Enter All the elements : "
+    cout << "Enter All the elements : ";
     for (int i = 0; i < size; i++)
         cin>>a[i];
     int n = sizeof(a) / sizeof(a[0]);
